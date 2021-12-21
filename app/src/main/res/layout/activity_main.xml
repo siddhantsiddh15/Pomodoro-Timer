@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/g"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:shadowColor="#19000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="3"
+        android:text="Set No. of Cycles:"
+        android:textColor="#F4F4F4"
+        android:textSize="22sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644"
+        tools:visibility="visible" />
+
+    <SeekBar
+        android:id="@+id/timerSeekBar"
+        android:layout_width="257dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/timerTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/breakSeekBar"
+        app:layout_constraintVertical_bias="0.491" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="0dp"
+        android:layout_height="84dp"
+
+        android:alpha="1"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#050505"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="10"
+        android:text="25:00"
+        android:textAlignment="center"
+        android:textColor="#F8F8F8"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/eggButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <SeekBar
+        android:id="@+id/breakSeekBar"
+        android:layout_width="204dp"
+        android:layout_height="19dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/cycleSeekBar"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <SeekBar
+        android:id="@+id/cycleSeekBar"
+        android:layout_width="162dp"
+        android:layout_height="26dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:shadowColor="#19000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="3"
+        android:text="Break time:"
+        android:textColor="#F4F4F4"
+        android:textSize="22sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.756"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif"
+        android:shadowColor="#19000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="3"
+        android:text="Work time:"
+        android:textColor="#F4F4F4"
+        android:textSize="22sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/timerTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831"
+        tools:visibility="visible" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-6110739581700337/7440178880"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eggButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="122dp"
+        android:layout_height="21dp"
+        android:text="This Session:"
+        android:textAlignment="viewEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toStartOf="@+id/totalHoursTextView"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allTimeBestTextView" />
+
+    <TextView
+        android:id="@+id/totalHoursTextView"
+        android:layout_width="169dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="52dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="0:00:00"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allTimeBestTextView" />
+
+    <Button
+        android:id="@+id/eggButton"
+        android:layout_width="410dp"
+        android:layout_height="69dp"
+        android:background="#00504B"
+        android:onClick="buttonClicked"
+        android:text="Start"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.584" />
+
+    <TextView
+        android:id="@+id/allTimeBestTextView"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="84dp"
+        android:text="All time best: 0:00:00"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eggButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lastSessionTextView"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="52dp"
+        android:text="Last Session: 0:00:00"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/allTimeBestTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eggButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
